@@ -1,0 +1,177 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0f172a;
+    color: #f8fafc;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin: 30px 0;
+    color: #e2e8f0;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #4a5568, transparent);
+    margin: 40px 0;
+}
+
+.page {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.card {
+    background: #1e293b;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.poster-judul {
+    padding: 20px;
+    background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+    text-align: center;
+}
+
+.poster-judul p {
+    display: inline-block;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.poster-judul img {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    margin-bottom: 15px;
+}
+
+.poster-judul h2 {
+    font-size: 1.4rem;
+    margin-top: 10px;
+    color: #f8fafc;
+}
+
+.info {
+    padding: 20px;
+}
+
+.info h4 {
+    color: #cbd5e0;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.info h4 p {
+    color: #e2e8f0;
+    margin-left: 5px;
+    font-weight: normal;
+    flex: 1;
+}
+
+.btn-group {
+    display: flex;
+    padding: 0 20px 20px;
+    gap: 10px;
+}
+
+.btn {
+    flex: 1;
+    padding: 10px 0;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+
+.btn a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.btn.del {
+    background-color: #e53e3e;
+    color: white;
+}
+
+.btn.del:hover {
+    background-color: #c53030;
+}
+
+.btn.play {
+    background-color: #38a169;
+    color: white;
+}
+
+.btn.play:hover {
+    background-color: #2f855a;
+}
+
+@media (max-width: 768px) {
+    .page {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .page {
+        grid-template-columns: 1fr;
+    }
+    
+    .btn-group {
+        flex-direction: column;
+    }
+}

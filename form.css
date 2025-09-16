@@ -1,0 +1,130 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            /* color: #333; */
+        }
+        
+        .film-form {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            width: 100%;
+            max-width: 500px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .film-form h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #1a2a6c;
+            font-size: 28px;
+            font-weight: 600;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        label {
+            font-weight: 500;
+            color: #1a2a6c;
+            margin-bottom: 5px;
+            display: block;
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background-color: #f9f9f9;
+        }
+        
+        input:focus, select:focus, textarea:focus {
+            border-color: #1a2a6c;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(26, 42, 108, 0.2);
+            background-color: #fff;
+        }
+        
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        input[type="file"] {
+            padding: 10px;
+            background-color: #f0f0f0;
+        }
+        
+        input[type="file"]::file-selector-button {
+            background-color: #1a2a6c;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+            transition: background-color 0.3s;
+        }
+        
+        input[type="file"]::file-selector-button:hover {
+            background-color: #0d1a4d;
+        }
+        
+        button {
+            background: linear-gradient(to right, #1a2a6c, #2c3e99);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 10px;
+        }
+        
+        button:hover {
+            background: linear-gradient(to right, #2c3e99, #1a2a6c);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        button:active {
+            transform: translateY(0);
+        }
+        
+        /* Gaya untuk placeholder */
+        ::placeholder {
+            color: #999;
+        }
+        
+        /* Responsivitas */
+        @media (max-width: 576px) {
+            .film-form {
+                padding: 20px;
+            }
+            
+            input, select, textarea, button {
+                padding: 10px;
+            }
+        }
